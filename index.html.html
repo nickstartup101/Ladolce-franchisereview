@@ -1016,7 +1016,7 @@
         document.getElementById('cafeCountLegend').innerHTML = `<i class="legend-dot" style="background:#8FD6AC;"></i>ພົບ ${results.length} ຮ້ານ ໃນລັດສະໝີ 500ມ.`;
       } else if(status === 'REQUEST_DENIED'){
         document.getElementById('cafeCountStat').textContent = '— ຮ້ານ';
-        document.getElementById('cafeCountLegend').innerHTML = `<i class="legend-dot" style="background:#F0A0A6;"></i>Places API ຖືກປະຕિເສດ`;
+        document.getElementById('cafeCountLegend').innerHTML = `<i class="legend-dot" style="background:#F0A0A6;"></i>Places API ຖືກປະຕິເສດ`;
       } else {
         document.getElementById('cafeCountStat').textContent = '0 ຮ້ານ';
         document.getElementById('cafeCountLegend').innerHTML = `<i class="legend-dot" style="background:#8FD6AC;"></i>ບໍ່ພົບຂໍ້ມູນ`;
@@ -1200,7 +1200,7 @@
     }catch(err){
       console.error(err);
       dot.classList.remove('live');
-      txt.textContent = 'ການວິເຄາະລົ້ມເຫລວ — ກວດສອບ API key / ການເຊື່ອມຕໍ່';
+      txt.textContent = 'การວິເຄາະລົ້ມເຫລວ — ກວດສອບ API key / ການເຊື່ອມຕໍ່';
       pill.textContent = '⚠ ຜິດພາດ';
       pill.style.background = '#FBE4E6';
       pill.style.color = '#DC3545';
@@ -1439,19 +1439,19 @@
   });
 </script>
 
-<!-- Firebase Config Block -->
+<!-- Firebase Config (Using Placeholders for Vercel Environment Variables) -->
 <script type="module">
   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
   import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
   const firebaseConfig = {
-    apiKey: "AIzaSyC4ajOxcYLJCQ7sC0SRaWtKW0Ec0T3EO9g",
-    authDomain: "franchise-kpi.firebaseapp.com",
-    projectId: "franchise-kpi",
-    storageBucket: "franchise-kpi.firebasestorage.app",
-    messagingSenderId: "135131144520",
-    appId: "1:135131144520:web:d092c2b29f3b2cf6b5537d",
-    measurementId: "G-F44X1S1FQJ"
+    apiKey: "__FIREBASE_API_KEY__",
+    authDomain: "__FIREBASE_AUTH_DOMAIN__",
+    projectId: "__FIREBASE_PROJECT_ID__",
+    storageBucket: "__FIREBASE_STORAGE_BUCKET__",
+    messagingSenderId: "__FIREBASE_MESSAGING_SENDER_ID__",
+    appId: "__FIREBASE_APP_ID__",
+    measurementId: "__FIREBASE_MEASUREMENT_ID__"
   };
 
   const app = initializeApp(firebaseConfig);
@@ -1468,8 +1468,8 @@
   };
 </script>
 
-<!-- Google Maps JS API script with embeded Google API key -->
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1a4eIBM-KeVKHkhBnfnZ2DFcd1QkmaWU&libraries=places&callback=initMap" async defer onerror="showMapError('ໂຫຼດ Google Maps script ບໍ່ໄດ້')"></script>
+<!-- Google Maps Script (Using Placeholder for Vercel Environment Variable) -->
+<script src="https://maps.googleapis.com/maps/api/js?key=__GOOGLE_MAPS_KEY__&libraries=places&callback=initMap" async defer onerror="showMapError('ໂຫຼດ Google Maps script ບໍ່ໄດ້')"></script>
 
 </body>
 </html>
