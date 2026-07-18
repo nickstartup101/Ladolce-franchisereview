@@ -1,8 +1,0 @@
-{
-  "name": "la-dolce-franchise-ai",
-  "version": "1.2.0",
-  "scripts": {
-    "build": "node build.js"
-  },
-  "dependencies": {}
-}
